@@ -1,11 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit;
-}
-
 :root {
     --very-dark-blue: hsl(233, 47%, 7%);
     --dark-desaturated-blue: hsl(244, 38%, 16%);
@@ -15,12 +7,19 @@
     --slightly-transparent-white-stat-h: hsla(0, 0%, 100%, 0.6);
 }
 
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
 html {
     font-size: 10px;
     font-family: 'Inter', sans-serif;
     color: white;
     background-color: var(--very-dark-blue);
     box-sizing: border-box;
+    position: relative;
 }
 
 .container {
@@ -138,28 +137,6 @@ html {
     width: 6.65rem;
 }
 
-.attribution {
-    position: absolute;
-    bottom: 1rem;
-    font-size: 1.28rem;
-    color: hsl(244, 15%, 43%);
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(244, 30%, 45%);
-    transition: .2s;
-    text-decoration: none;
-}
-
-.attribution a:hover {
-    color: var(--soft-violet);
-}
-
-.attribution a:active {
-    color: violet;
-}
-
 @media (max-width: 1070px) {
     .card {
         flex-direction: column;
@@ -227,4 +204,26 @@ html {
             margin-left: 0;
         }
     }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.28rem;
+    color: hsl(244, 15%, 43%);
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(244, 30%, 45%);
+    transition: .2s;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--soft-violet);
+}
+
+.attribution a:active {
+    color: violet;
 }
