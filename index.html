@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Stats preview card component</title>
 </head>
 
-<body class="container">
-  <main class="card">
+<body>
+  <article class="card">
     <section class="card__picture">
       <picture>
-        <source media="(min-width: 1071px)" srcset="images/image-header-desktop.jpg">
+        <source media="(min-width: 1036px)" srcset="images/image-header-desktop.jpg">
         <img src="images/image-header-mobile.jpg" alt="">
       </picture>
       <div class="card__violet"></div>
@@ -29,13 +29,14 @@
           experience, and overall efficiency.
         </p>
       </header>
-      <div class="card__stats">
-        <p><span class="card__number">10k+ </span><span class="card__things">companies</span></p>
-        <p><span class="card__number">314 </span><span class="card__things">templates</span></p>
-        <p><span class="card__number">12M+ </span><span class="card__things">queries</span></p>
-      </div>
+      <ul class="card__stats">
+        <li><span class="card__number">10k+ </span><span class="card__things">companies</span></li>
+        <li><span class="card__number">314 </span><span class="card__things">templates</span></li>
+        <li><span class="card__number">12M+ </span><span class="card__things">queries</span></li>
+      </ul>
     </section>
-  </main>
+  </article>
+
   <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></p>
     <p>Coded by <a href="https://www.frontendmentor.io/profile/zauri-khutsishvili" target="_blank">Zauri Khutsishvili</a></p>
