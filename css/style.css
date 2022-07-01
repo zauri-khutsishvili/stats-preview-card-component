@@ -7,7 +7,7 @@
     --slightly-transparent-white-stat-h: hsla(0, 0%, 100%, 0.6);
 }
 
-*, *::after, *::before {
+*, *::before, *::after {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
@@ -15,18 +15,16 @@
 
 html {
     font-size: 10px;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    background-color: var(--very-dark-blue);
     box-sizing: border-box;
-    position: relative;
 }
 
-.container {
+body {
     height: 100vh;
+    background-color: var(--very-dark-blue);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .card {
@@ -34,13 +32,16 @@ html {
     margin: 3rem;
     display: flex;
     flex-direction: row-reverse;
+    font-family: 'Inter', sans-serif;
     background-color: var(--dark-desaturated-blue);
     border-radius: .8rem;
-    box-shadow: 0 2.25rem 1.5rem -1.5rem hsla(244, 38%, 14%, .315);
+    box-shadow: 0 2rem 2rem -1rem rgba(23, 25, 41, 0.203087);
+    overflow: hidden;
+    transition: max-width .25s ease;
 }
 
 .card__picture {
-    width: 100%;
+    width: 48.64865%;
     height: auto;
     object-fit: cover;
     position: relative;
@@ -48,7 +49,6 @@ html {
 
 .card__picture img {
     vertical-align: middle;
-    border-radius: 0 .8rem .8rem 0;
     width: 54rem;
     height: 100%;
     object-fit: cover;
@@ -71,16 +71,17 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 0 .8rem .8rem 0;
 }
 
 .card__content {
+    width: 51.35135%;
     padding: 7.1rem calc(95 / 1110 * 100%) 5.9rem 7.15rem;
 }
 
 .card__title {
     font-size: 3.6rem;
     font-weight: 700;
+    color: var(--white);
     padding-left: 0.05rem;
 }
 
@@ -91,8 +92,8 @@ html {
 .card__description {
     font-size: 1.5rem;
     color: var(--slightly-transparent-white-main-p);
-    line-height: 2.5rem;
-    letter-spacing: 0.002rem;
+    line-height: 1.667em;
+    letter-spacing: 0.0014em;
     padding-right: 1.5rem;
     margin-top: 2.5rem;
     margin-bottom: 7.2rem;
@@ -102,8 +103,10 @@ html {
     padding-right: 5.169rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     font-size: 2.4rem;
     font-weight: 700;
+    list-style-type: none;
     color: var(--white);
 }
 
@@ -118,39 +121,38 @@ html {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
-    line-height: 2.5rem;
-    letter-spacing: 0.1rem;
+    line-height: 2.084em;
+    letter-spacing: 0.0835em;
     color: var(--slightly-transparent-white-stat-h);
 }
 
-.card__stats p:nth-child(1) {
+.card__stats li:nth-child(1) {
     width: 8.3rem;
 }
 
-.card__stats p:nth-child(2) {
+.card__stats li:nth-child(2) {
     width: 7.9rem;
     margin-left: .15rem;
     margin-right: -0.15rem;
 }
 
-.card__stats p:nth-child(3) {
+.card__stats li:nth-child(3) {
     width: 6.65rem;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1035px) {
     .card {
         flex-direction: column;
-        width: 65.4rem;
+        max-width: 65.4rem;
         margin: 3.75rem;
     }
 
-    .card__picture img {
-        border-radius: .8rem .8rem 0 0;
+    .card__picture {
         width: 100%;
     }
 
-    .card__violet {
-        border-radius: .8rem .8rem 0 0;
+    .card__picture img {
+        width: 100%;
     }
 
     .card__content, .card__title, .card__description, .card__stats {
@@ -160,12 +162,13 @@ html {
     }
 
     .card__content {
+        width: auto;
         margin: 4rem 4.5rem 3.2rem;
     }
 
     .card__title {
         font-size: 2.8rem;
-        line-height: 3.2rem;
+        line-height: 1.15em;
     }
 
     .card__description {
@@ -173,7 +176,7 @@ html {
         margin: 1.6rem auto;
     }
 
-    .card__stats p {
+    .card__stats li {
         margin-top: 2.4rem;
     }
 
@@ -195,7 +198,7 @@ html {
             align-items: center;
         }
 
-        .card__stats p:nth-child(2) {
+        .card__stats li:nth-child(2) {
             margin-left: 0;
             margin-right: 0;
         }
@@ -209,6 +212,7 @@ html {
 .attribution {
     position: absolute;
     bottom: 1rem;
+    font-family: 'Inter', sans-serif;
     font-size: 1.28rem;
     color: hsl(244, 15%, 43%);
     text-align: center;
