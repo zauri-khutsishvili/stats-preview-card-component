@@ -20,7 +20,7 @@ html {
 
 body {
     height: 100vh;
-    min-height: 54rem;
+    min-height: 58rem;
     background-color: var(--very-dark-blue);
     display: flex;
     justify-content: center;
