@@ -20,6 +20,7 @@ html {
 
 body {
     height: 100vh;
+    min-height: 54rem;
     background-color: var(--very-dark-blue);
     display: flex;
     justify-content: center;
@@ -141,6 +142,10 @@ body {
 }
 
 @media (max-width: 1035px) {
+    body {
+        min-height: 87rem;
+    }
+
     .card {
         flex-direction: column;
         max-width: 65.4rem;
@@ -185,6 +190,10 @@ body {
     }
 
     @media (max-width: 500px) {
+        body {
+            min-height: 92rem;
+        }
+
         .card {
             margin: 2.4rem;
         }
